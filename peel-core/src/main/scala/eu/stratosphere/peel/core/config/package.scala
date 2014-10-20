@@ -3,6 +3,7 @@ package eu.stratosphere.peel.core
 import java.io.File
 import java.lang.{System => Sys}
 import java.nio.file.{Files, Paths}
+import javax.script.ScriptEngineManager
 
 import com.typesafe.config.{Config, ConfigFactory, ConfigParseOptions}
 import eu.stratosphere.peel.core.beans.experiment.Experiment
@@ -89,7 +90,6 @@ package object config {
   }
 
   private class ConfigBuilder {
-
     // initial empty configuration
     private var config = ConfigFactory.empty()
 
@@ -103,6 +103,7 @@ package object config {
         config = ConfigFactory.parseResources(name, options).withFallback(config)
       }
     }
+
     // helper function: append file to current config
     def loadFile(path: String) = {
       if (Files.isReadable(Paths.get(path))) {
@@ -114,5 +115,19 @@ package object config {
     def append(other: Config) = config = other.withFallback(config)
 
     def resolve() = config.resolve()
+  }
+
+  private class JavaScriptEngine {
+
+    private def evaluate(config: Config) = {
+      val x = evaluateJS(config.getString("system.aura.foo.bar"))
+      config
+    }
+
+    private def evaluateJS(code: String) = {
+      val engine = new ScriptEngineManager().getEngineByName("js")
+      val res = engine.eval(s"JSON.stringify($code)").toString
+      res
+    }
   }
 }

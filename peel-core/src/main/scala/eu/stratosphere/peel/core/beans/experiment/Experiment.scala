@@ -105,6 +105,9 @@ object Experiment {
   /** Representation of the state of a run. */
   trait RunState {
     val name: String
+    val runnerID: String
+    val runnerName: String
+    val runnerVersion: String
     var runExitCode: Option[Int]
     var runTime: Long
   }
@@ -166,7 +169,7 @@ object Experiment {
     /** Before the run, collect runner log files and their current line counts */
     protected def beforeRun() = {
       val logFiles = for (pattern <- logFilePatterns; f <- (shell !! s"ls $pattern").split(Sys.lineSeparator).map(_.trim)) yield f
-      logFileCounts = Map((for (f <- logFiles) yield f -> (shell !! s"wc -l $f | cut -d' ' -f1").trim.toLong): _*)
+      logFileCounts = Map((for (f <- logFiles) yield f -> (shell !! s"wc -l $f | xargs | cut -d' ' -f1").trim.toLong): _*)
     }
 
     /** After the run, copy logs */

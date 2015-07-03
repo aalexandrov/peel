@@ -32,13 +32,14 @@ import spray.json._
   * @param name Name of the Experiment
   * @param config Config Object for the experiment
   */
-class FlinkExperiment(command: String,
-                      runner: Flink,
-                      runs: Int,
-                      inputs: Set[DataSet],
-                      outputs: Set[ExperimentOutput],
-                      name: String,
-                      config: Config) extends Experiment(command, runner, runs, inputs, outputs, name, config) {
+class FlinkExperiment(
+  command: String,
+  runner: Flink,
+  runs: Int,
+  inputs: Set[DataSet],
+  outputs: Set[ExperimentOutput],
+  name: String,
+  config: Config) extends Experiment(command, runner, runs, inputs, outputs, name, config) {
 
   def this(runs: Int, runner: Flink, input: DataSet, output: ExperimentOutput, command: String, name: String, config: Config) = this(command, runner, runs, Set(input), Set(output), name, config)
 
@@ -49,17 +50,19 @@ class FlinkExperiment(command: String,
 
 object FlinkExperiment {
 
-  case class State(name: String,
-                   suiteName: String,
-                   command: String,
-                   runnerName: String,
-                   runnerVersion: String,
-                   var runExitCode: Option[Int] = None,
-                   var runTime: Long = 0,
-                   var plnExitCode: Option[Int] = None) extends Experiment.RunState {}
+  case class State(
+    name: String,
+    suiteName: String,
+    command: String,
+    runnerID: String,
+    runnerName: String,
+    runnerVersion: String,
+    var runExitCode: Option[Int] = None,
+    var runTime: Long = 0,
+    var plnExitCode: Option[Int] = None) extends Experiment.RunState {}
 
   object StateProtocol extends DefaultJsonProtocol with NullOptions {
-    implicit val stateFormat = jsonFormat8(State)
+    implicit val stateFormat = jsonFormat9(State)
   }
 
   /** A private inner class encapsulating the logic of single run. */
@@ -69,7 +72,7 @@ object FlinkExperiment {
 
     val runnerLogPath = exp.config.getString("system.flink.path.log")
 
-    override def isSuccessful = state.plnExitCode.getOrElse(-1) == 0 && state.runExitCode.getOrElse(-1) == 0
+    override def isSuccessful = state.runExitCode.getOrElse(-1) == 0 // FIXME: && state.plnExitCode.getOrElse(-1) == 0
 
     override protected def logFilePatterns = List(s"$runnerLogPath/flink-*.log", s"$runnerLogPath/flink-*.out")
 
@@ -78,10 +81,10 @@ object FlinkExperiment {
         try {
           io.Source.fromFile(s"$home/state.json").mkString.parseJson.convertTo[State]
         } catch {
-          case e: Throwable => State(name, Sys.getProperty("app.suite.name"), command, exp.runner.name, exp.runner.version)
+          case e: Throwable => State(name, Sys.getProperty("app.suite.name"), command, exp.runner.beanName, exp.runner.name, exp.runner.version)
         }
       } else {
-        State(name, Sys.getProperty("app.suite.name"), command, exp.runner.name, exp.runner.version)
+        State(name, Sys.getProperty("app.suite.name"), command, exp.runner.beanName, exp.runner.name, exp.runner.version)
       }
     }
 

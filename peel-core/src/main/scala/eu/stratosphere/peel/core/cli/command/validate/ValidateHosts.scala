@@ -119,7 +119,7 @@ class ValidateHosts extends Command {
             } else {
               // check authorized keys
               val authorized = shell ! s"ssh -o BatchMode=yes $slave exit" == 0
-              if (!authorized) logger.error(s"Host '$slave' is not in authorized keys")
+              if (!authorized) logger.error(s"Host '$slave' is not in the list of authorized keys")
             }
           }
 

@@ -29,6 +29,8 @@
         <constructor-arg name="version" value="2.4.1"/>
     </bean>
     -->
+
+    <!-- Yarn -->
     <bean id="yarn-2.4.1" class="eu.stratosphere.peel.extensions.hadoop.beans.system.Yarn" parent="system">
         <constructor-arg name="version" value="2.4.1"/>
     </bean>

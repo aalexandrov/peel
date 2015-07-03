@@ -1,9 +1,6 @@
 package eu.stratosphere.peel.extensions.flink.beans.system
 
-import java.nio.file.{Files, Paths}
-
 import com.samskivert.mustache.Mustache
-import com.typesafe.config.ConfigException
 import eu.stratosphere.peel.core.beans.system.Lifespan.Lifespan
 import eu.stratosphere.peel.core.beans.system.{SetUpTimeoutException, System}
 import eu.stratosphere.peel.core.config.{Model, SystemConfig}
@@ -15,11 +12,11 @@ import scala.collection.JavaConverters._
   *
   * Implements Flink as a [[eu.stratosphere.peel.core.beans.system.System System]] class and provides setup and teardown methods.
   *
- * @param version Version of the system (e.g. "7.1")
- * @param lifespan [[eu.stratosphere.peel.core.beans.system.Lifespan Lifespan]] of the system
- * @param dependencies Set of dependencies that this system needs
- * @param mc The moustache compiler to compile the templates that are used to generate property files for the system
- */
+  * @param version Version of the system (e.g. "7.1")
+  * @param lifespan [[eu.stratosphere.peel.core.beans.system.Lifespan Lifespan]] of the system
+  * @param dependencies Set of dependencies that this system needs
+  * @param mc The moustache compiler to compile the templates that are used to generate property files for the system
+  */
 class Flink(version: String, lifespan: Lifespan, dependencies: Set[System] = Set(), mc: Mustache.Compiler) extends System("flink", version, lifespan, dependencies, mc) {
 
   override def configuration() = SystemConfig(config, {
@@ -35,21 +32,19 @@ class Flink(version: String, lifespan: Lifespan, dependencies: Set[System] = Set
     val logDir = config.getString("system.flink.path.log")
 
     // check if tmp dir exists and create if not
-    try {
-      val tmpDir = config.getString("system.flink.config.yaml.taskmanager.tmp.dirs")
-      // check if tmp dir exists on jobmanager node
-      val jobNode = config.getString("system.flink.config.yaml.jobmanager.rpc.address")
-      logger.info(s"Initializing tmp directory $tmpDir at jobmanager node $jobNode")
-      shell ! s""" ssh $user@$jobNode "rm -Rf $tmpDir" """
-      shell ! s""" ssh $user@$jobNode "mkdir -p $tmpDir" """
+    val tmpDirs = config.getString("system.flink.config.yaml.taskmanager.tmp.dirs")
+    val jmHost = config.getString("system.flink.config.yaml.jobmanager.rpc.address")
 
-      for (dataNode <- config.getStringList(s"system.$configKey.config.slaves").asScala) {
-        logger.info(s"Initializing tmp directory $tmpDir at taskmanager node $dataNode")
-        shell ! s""" ssh $user@$dataNode "rm -Rf $tmpDir" """
-        shell ! s""" ssh $user@$dataNode "mkdir -p $tmpDir" """
+    for (tmpDir <- tmpDirs.split(':')) {
+      logger.info(s"Initializing tmp directory $tmpDir at jobmanager host $jmHost")
+      shell ! s""" ssh $user@$jmHost "rm -Rf $tmpDir" """
+      shell ! s""" ssh $user@$jmHost "mkdir -p $tmpDir" """
+
+      for (tmHost <- config.getStringList(s"system.$configKey.config.slaves").asScala) {
+        logger.info(s"Initializing tmp directory $tmpDir at taskmanager host $tmHost")
+        shell ! s""" ssh $user@$tmHost "rm -Rf $tmpDir" """
+        shell ! s""" ssh $user@$tmHost "mkdir -p $tmpDir" """
       }
-    } catch {
-      case _: ConfigException => // ignore not set explicitly, java default is taken
     }
 
     var failedStartUpAttempts = 0

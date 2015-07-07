@@ -1,3 +1,5 @@
+baseurl:            /peel
+
 highlighter:        rouge
 
 title:              Peel Framework

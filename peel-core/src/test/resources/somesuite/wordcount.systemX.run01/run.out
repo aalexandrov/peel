@@ -1,0 +1,50 @@
+07/29/2015 20:38:03	Job execution switched to status RUNNING.
+07/29/2015 20:38:03	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(1/4) switched to SCHEDULED 
+07/29/2015 20:38:03	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(1/4) switched to DEPLOYING 
+07/29/2015 20:38:03	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(2/4) switched to SCHEDULED 
+07/29/2015 20:38:03	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(2/4) switched to DEPLOYING 
+07/29/2015 20:38:03	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(3/4) switched to SCHEDULED 
+07/29/2015 20:38:03	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(3/4) switched to DEPLOYING 
+07/29/2015 20:38:03	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(4/4) switched to SCHEDULED 
+07/29/2015 20:38:03	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(4/4) switched to DEPLOYING 
+07/29/2015 20:38:04	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(4/4) switched to RUNNING 
+07/29/2015 20:38:04	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(1/4) switched to RUNNING 
+07/29/2015 20:38:04	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(3/4) switched to RUNNING 
+07/29/2015 20:38:04	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(2/4) switched to RUNNING 
+07/29/2015 20:38:04	Reduce (SUM(1))(2/4) switched to SCHEDULED 
+07/29/2015 20:38:04	Reduce (SUM(1))(1/4) switched to SCHEDULED 
+07/29/2015 20:38:04	Reduce (SUM(1))(2/4) switched to DEPLOYING 
+07/29/2015 20:38:05	Reduce (SUM(1))(4/4) switched to SCHEDULED 
+07/29/2015 20:38:05	Reduce (SUM(1))(3/4) switched to SCHEDULED 
+07/29/2015 20:38:05	Reduce (SUM(1))(4/4) switched to DEPLOYING 
+07/29/2015 20:38:05	Reduce (SUM(1))(1/4) switched to DEPLOYING 
+07/29/2015 20:38:05	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(4/4) switched to FINISHED 
+07/29/2015 20:38:05	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(2/4) switched to FINISHED 
+07/29/2015 20:38:05	Reduce (SUM(1))(3/4) switched to DEPLOYING 
+07/29/2015 20:38:05	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(1/4) switched to FINISHED 
+07/29/2015 20:38:05	CHAIN DataSource (at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:18) (org.apache.flink.api.java.io.TextInputFormat)) -> FlatMap (FlatMap at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:19)) -> Map (Map at eu.stratosphere.peel.flink.Wordcount$.main(Wordcount.scala:20)) -> Combine(SUM(1))(3/4) switched to FINISHED 
+07/29/2015 20:38:05	Reduce (SUM(1))(1/4) switched to RUNNING 
+07/29/2015 20:38:05	Reduce (SUM(1))(2/4) switched to RUNNING 
+07/29/2015 20:38:05	Reduce (SUM(1))(4/4) switched to RUNNING 
+07/29/2015 20:38:05	Reduce (SUM(1))(3/4) switched to RUNNING 
+07/29/2015 20:38:05	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(4/4) switched to SCHEDULED 
+07/29/2015 20:38:05	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(4/4) switched to DEPLOYING 
+07/29/2015 20:38:05	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(1/4) switched to SCHEDULED 
+07/29/2015 20:38:05	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(1/4) switched to DEPLOYING 
+07/29/2015 20:38:05	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(2/4) switched to SCHEDULED 
+07/29/2015 20:38:05	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(2/4) switched to DEPLOYING 
+07/29/2015 20:38:05	Reduce (SUM(1))(4/4) switched to FINISHED 
+07/29/2015 20:38:05	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(3/4) switched to SCHEDULED 
+07/29/2015 20:38:05	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(3/4) switched to DEPLOYING 
+07/29/2015 20:38:05	Reduce (SUM(1))(2/4) switched to FINISHED 
+07/29/2015 20:38:05	Reduce (SUM(1))(1/4) switched to FINISHED 
+07/29/2015 20:38:05	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(1/4) switched to RUNNING 
+07/29/2015 20:38:05	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(2/4) switched to RUNNING 
+07/29/2015 20:38:05	Reduce (SUM(1))(3/4) switched to FINISHED 
+07/29/2015 20:38:05	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(3/4) switched to RUNNING 
+07/29/2015 20:38:05	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(4/4) switched to RUNNING 
+07/29/2015 20:38:05	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(3/4) switched to FINISHED 
+07/29/2015 20:38:06	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(1/4) switched to FINISHED 
+07/29/2015 20:38:06	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(4/4) switched to FINISHED 
+07/29/2015 20:38:06	DataSink (CsvOutputFormat (path: hdfs://localhost:9000/tmp/output/wordcount, delimiter: ,))(2/4) switched to FINISHED 
+07/29/2015 20:38:06	Job execution switched to status FINISHED.

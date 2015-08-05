@@ -1,0 +1,8 @@
+15/07/29 20:39:19 INFO Master: Registering app peel-wordcount-spark
+15/07/29 20:39:19 INFO Master: Registered app peel-wordcount-spark with ID app-20150729203919-0000
+15/07/29 20:39:19 INFO Master: Launching executor app-20150729203919-0000/0 on worker worker-20150729203908-130.149.248.229-35014
+15/07/29 20:39:28 INFO Master: Received unregister request from application app-20150729203919-0000
+15/07/29 20:39:28 INFO Master: Removing app app-20150729203919-0000
+15/07/29 20:39:29 INFO SecurityManager: Changing view acls to: someuser
+15/07/29 20:39:29 INFO SecurityManager: Changing modify acls to: someuser
+15/07/29 20:39:29 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(someuser); users with modify permissions: Set(someuser)

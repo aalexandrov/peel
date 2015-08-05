@@ -1,0 +1,11 @@
+{
+  "name": "wordcount.flink.run03",
+  "suiteName": "wordcount.default",
+  "command": "\n              -v -c eu.stratosphere.peel.flink.Wordcount                           \\\n              /home/someuser/etc/benchmarks/peel-wordcount/apps/peel-wordcount-flink-jobs-1.0-SNAPSHOT.jar          \\\n              hdfs://localhost:9000/tmp/input/rubbish.txt                            \\\n              hdfs://localhost:9000/tmp/output/wordcount\n            ",
+  "runnerID": "flink-0.9.0",
+  "runnerName": "flink",
+  "runnerVersion": "0.9.0",
+  "runExitCode": 0,
+  "runTime": 6397,
+  "plnExitCode": 0
+}

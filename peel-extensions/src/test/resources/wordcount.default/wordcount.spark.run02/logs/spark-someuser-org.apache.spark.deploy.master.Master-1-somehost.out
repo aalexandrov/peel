@@ -1,0 +1,11 @@
+15/07/29 20:39:40 INFO Master: Registering app peel-wordcount-spark
+15/07/29 20:39:40 INFO Master: Registered app peel-wordcount-spark with ID app-20150729203940-0001
+15/07/29 20:39:40 INFO Master: Launching executor app-20150729203940-0001/0 on worker worker-20150729203908-130.149.248.229-35014
+15/07/29 20:39:48 INFO Master: Received unregister request from application app-20150729203940-0001
+15/07/29 20:39:48 INFO Master: Removing app app-20150729203940-0001
+15/07/29 20:39:48 WARN Master: Application peel-wordcount-spark is still in progress, it may be terminated abnormally.
+15/07/29 20:39:48 INFO SecurityManager: Changing view acls to: someuser
+15/07/29 20:39:48 INFO SecurityManager: Changing modify acls to: someuser
+15/07/29 20:39:48 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(someuser); users with modify permissions: Set(someuser)
+15/07/29 20:39:48 WARN Master: Got status update for unknown executor app-20150729203940-0001/0
+15/07/29 20:39:48 INFO Master: akka.tcp://sparkDriver@130.149.248.229:33941 got disassociated, removing it.

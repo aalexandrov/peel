@@ -1,0 +1,114 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+15/07/29 20:39:57 INFO SparkContext: Running Spark version 1.4.0
+15/07/29 20:39:57 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+15/07/29 20:39:57 WARN Utils: Your hostname, somehost resolves to a loopback address: 127.0.1.1; using 130.149.248.229 instead (on interface eth0)
+15/07/29 20:39:57 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+15/07/29 20:39:57 INFO SecurityManager: Changing view acls to: someuser
+15/07/29 20:39:57 INFO SecurityManager: Changing modify acls to: someuser
+15/07/29 20:39:57 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(someuser); users with modify permissions: Set(someuser)
+15/07/29 20:39:57 INFO Slf4jLogger: Slf4jLogger started
+15/07/29 20:39:57 INFO Remoting: Starting remoting
+15/07/29 20:39:58 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@130.149.248.229:51160]
+15/07/29 20:39:58 INFO Utils: Successfully started service 'sparkDriver' on port 51160.
+15/07/29 20:39:58 INFO SparkEnv: Registering MapOutputTracker
+15/07/29 20:39:58 INFO SparkEnv: Registering BlockManagerMaster
+15/07/29 20:39:58 INFO DiskBlockManager: Created local directory at /tmp/spark-7d61d2be-be18-48f6-8014-a666f4f5855d/blockmgr-15f754c7-aeec-40d4-b810-d8b3cd018d0b
+15/07/29 20:39:58 INFO MemoryStore: MemoryStore started with capacity 265.1 MB
+15/07/29 20:39:58 INFO HttpFileServer: HTTP File server directory is /tmp/spark-7d61d2be-be18-48f6-8014-a666f4f5855d/httpd-ad206953-603d-4dfb-bd76-c35e9df9f69f
+15/07/29 20:39:58 INFO HttpServer: Starting HTTP Server
+15/07/29 20:39:58 INFO Utils: Successfully started service 'HTTP file server' on port 47935.
+15/07/29 20:39:58 INFO SparkEnv: Registering OutputCommitCoordinator
+15/07/29 20:39:58 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+15/07/29 20:39:58 INFO SparkUI: Started SparkUI at http://130.149.248.229:4040
+15/07/29 20:39:58 INFO SparkContext: Added JAR file:/home/someuser/etc/benchmarks/peel-wordcount/apps/peel-wordcount-spark-jobs-1.0-SNAPSHOT.jar at http://130.149.248.229:47935/jars/peel-wordcount-spark-jobs-1.0-SNAPSHOT.jar with timestamp 1438195198571
+15/07/29 20:39:58 INFO AppClient$ClientActor: Connecting to master akka.tcp://sparkMaster@somehost:7077/user/Master...
+15/07/29 20:39:58 INFO SparkDeploySchedulerBackend: Connected to Spark cluster with app ID app-20150729203958-0002
+15/07/29 20:39:58 INFO AppClient$ClientActor: Executor added: app-20150729203958-0002/0 on worker-20150729203908-130.149.248.229-35014 (130.149.248.229:35014) with 4 cores
+15/07/29 20:39:58 INFO SparkDeploySchedulerBackend: Granted executor ID app-20150729203958-0002/0 on hostPort 130.149.248.229:35014 with 4 cores, 512.0 MB RAM
+15/07/29 20:39:58 INFO AppClient$ClientActor: Executor updated: app-20150729203958-0002/0 is now LOADING
+15/07/29 20:39:58 INFO AppClient$ClientActor: Executor updated: app-20150729203958-0002/0 is now RUNNING
+15/07/29 20:39:59 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 33837.
+15/07/29 20:39:59 INFO NettyBlockTransferService: Server created on 33837
+15/07/29 20:39:59 INFO BlockManagerMaster: Trying to register BlockManager
+15/07/29 20:39:59 INFO BlockManagerMasterEndpoint: Registering block manager 130.149.248.229:33837 with 265.1 MB RAM, BlockManagerId(driver, 130.149.248.229, 33837)
+15/07/29 20:39:59 INFO BlockManagerMaster: Registered BlockManager
+15/07/29 20:39:59 INFO EventLoggingListener: Logging events to file:///home/someuser/etc/spark-1.4.0-bin-hadoop2.4/logs/app-20150729203958-0002
+15/07/29 20:39:59 INFO SparkDeploySchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+15/07/29 20:40:00 INFO MemoryStore: ensureFreeSpace(160080) called with curMem=0, maxMem=278019440
+15/07/29 20:40:00 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 156.3 KB, free 265.0 MB)
+15/07/29 20:40:00 INFO MemoryStore: ensureFreeSpace(17237) called with curMem=160080, maxMem=278019440
+15/07/29 20:40:00 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 16.8 KB, free 265.0 MB)
+15/07/29 20:40:00 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 130.149.248.229:33837 (size: 16.8 KB, free: 265.1 MB)
+15/07/29 20:40:00 INFO SparkContext: Created broadcast 0 from textFile at Wordcount.scala:18
+15/07/29 20:40:01 INFO FileInputFormat: Total input paths to process : 1
+15/07/29 20:40:01 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+15/07/29 20:40:01 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+15/07/29 20:40:01 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+15/07/29 20:40:01 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+15/07/29 20:40:01 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+15/07/29 20:40:01 INFO SparkContext: Starting job: saveAsTextFile at Wordcount.scala:22
+15/07/29 20:40:01 INFO DAGScheduler: Registering RDD 3 (map at Wordcount.scala:20)
+15/07/29 20:40:01 INFO DAGScheduler: Got job 0 (saveAsTextFile at Wordcount.scala:22) with 2 output partitions (allowLocal=false)
+15/07/29 20:40:01 INFO DAGScheduler: Final stage: ResultStage 1(saveAsTextFile at Wordcount.scala:22)
+15/07/29 20:40:01 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+15/07/29 20:40:01 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+15/07/29 20:40:01 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[3] at map at Wordcount.scala:20), which has no missing parents
+15/07/29 20:40:01 INFO MemoryStore: ensureFreeSpace(4088) called with curMem=177317, maxMem=278019440
+15/07/29 20:40:01 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 4.0 KB, free 265.0 MB)
+15/07/29 20:40:01 INFO MemoryStore: ensureFreeSpace(2331) called with curMem=181405, maxMem=278019440
+15/07/29 20:40:01 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 2.3 KB, free 265.0 MB)
+15/07/29 20:40:01 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 130.149.248.229:33837 (size: 2.3 KB, free: 265.1 MB)
+15/07/29 20:40:01 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:874
+15/07/29 20:40:01 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[3] at map at Wordcount.scala:20)
+15/07/29 20:40:01 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks
+15/07/29 20:40:02 INFO SparkDeploySchedulerBackend: Registered executor: AkkaRpcEndpointRef(Actor[akka.tcp://sparkExecutor@130.149.248.229:45564/user/Executor#-636511615]) with ID 0
+15/07/29 20:40:02 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, 130.149.248.229, ANY, 1491 bytes)
+15/07/29 20:40:02 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, 130.149.248.229, ANY, 1491 bytes)
+15/07/29 20:40:02 INFO BlockManagerMasterEndpoint: Registering block manager 130.149.248.229:35968 with 265.1 MB RAM, BlockManagerId(0, 130.149.248.229, 35968)
+15/07/29 20:40:03 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 130.149.248.229:35968 (size: 2.3 KB, free: 265.1 MB)
+15/07/29 20:40:03 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 130.149.248.229:35968 (size: 16.8 KB, free: 265.1 MB)
+15/07/29 20:40:04 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 2157 ms on 130.149.248.229 (1/2)
+15/07/29 20:40:04 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 2119 ms on 130.149.248.229 (2/2)
+15/07/29 20:40:04 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+15/07/29 20:40:04 INFO DAGScheduler: ShuffleMapStage 0 (map at Wordcount.scala:20) finished in 2.799 s
+15/07/29 20:40:04 INFO DAGScheduler: looking for newly runnable stages
+15/07/29 20:40:04 INFO DAGScheduler: running: Set()
+15/07/29 20:40:04 INFO DAGScheduler: waiting: Set(ResultStage 1)
+15/07/29 20:40:04 INFO DAGScheduler: failed: Set()
+15/07/29 20:40:04 INFO DAGScheduler: Missing parents for ResultStage 1: List()
+15/07/29 20:40:04 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[5] at saveAsTextFile at Wordcount.scala:22), which is now runnable
+15/07/29 20:40:04 INFO MemoryStore: ensureFreeSpace(112760) called with curMem=183736, maxMem=278019440
+15/07/29 20:40:04 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 110.1 KB, free 264.9 MB)
+15/07/29 20:40:04 INFO MemoryStore: ensureFreeSpace(37874) called with curMem=296496, maxMem=278019440
+15/07/29 20:40:04 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 37.0 KB, free 264.8 MB)
+15/07/29 20:40:04 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 130.149.248.229:33837 (size: 37.0 KB, free: 265.1 MB)
+15/07/29 20:40:04 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:874
+15/07/29 20:40:04 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 1 (MapPartitionsRDD[5] at saveAsTextFile at Wordcount.scala:22)
+15/07/29 20:40:04 INFO TaskSchedulerImpl: Adding task set 1.0 with 2 tasks
+15/07/29 20:40:04 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2, 130.149.248.229, PROCESS_LOCAL, 1251 bytes)
+15/07/29 20:40:04 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3, 130.149.248.229, PROCESS_LOCAL, 1251 bytes)
+15/07/29 20:40:04 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 130.149.248.229:35968 (size: 37.0 KB, free: 265.1 MB)
+15/07/29 20:40:05 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 130.149.248.229:45564
+15/07/29 20:40:05 INFO MapOutputTrackerMaster: Size of output statuses for shuffle 0 is 156 bytes
+15/07/29 20:40:05 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 625 ms on 130.149.248.229 (1/2)
+15/07/29 20:40:05 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 628 ms on 130.149.248.229 (2/2)
+15/07/29 20:40:05 INFO DAGScheduler: ResultStage 1 (saveAsTextFile at Wordcount.scala:22) finished in 0.633 s
+15/07/29 20:40:05 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+15/07/29 20:40:05 INFO DAGScheduler: Job 0 finished: saveAsTextFile at Wordcount.scala:22, took 3.738596 s
+15/07/29 20:40:05 INFO SparkContext: Invoking stop() from shutdown hook
+15/07/29 20:40:05 INFO SparkUI: Stopped Spark web UI at http://130.149.248.229:4040
+15/07/29 20:40:05 INFO DAGScheduler: Stopping DAGScheduler
+15/07/29 20:40:05 INFO SparkDeploySchedulerBackend: Shutting down all executors
+15/07/29 20:40:05 INFO SparkDeploySchedulerBackend: Asking each executor to shut down
+15/07/29 20:40:05 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+15/07/29 20:40:05 INFO Utils: path = /tmp/spark-7d61d2be-be18-48f6-8014-a666f4f5855d/blockmgr-15f754c7-aeec-40d4-b810-d8b3cd018d0b, already present as root for deletion.
+15/07/29 20:40:05 INFO MemoryStore: MemoryStore cleared
+15/07/29 20:40:05 INFO BlockManager: BlockManager stopped
+15/07/29 20:40:05 INFO BlockManagerMaster: BlockManagerMaster stopped
+15/07/29 20:40:05 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+15/07/29 20:40:05 INFO RemoteActorRefProvider$RemotingTerminator: Shutting down remote daemon.
+15/07/29 20:40:05 INFO RemoteActorRefProvider$RemotingTerminator: Remote daemon shut down; proceeding with flushing remote transports.
+15/07/29 20:40:05 INFO SparkContext: Successfully stopped SparkContext
+15/07/29 20:40:05 INFO Utils: Shutdown hook called
+15/07/29 20:40:05 INFO Utils: Deleting directory /tmp/spark-7d61d2be-be18-48f6-8014-a666f4f5855d
+15/07/29 20:40:05 INFO RemoteActorRefProvider$RemotingTerminator: Remoting shut down.

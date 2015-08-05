@@ -1,0 +1,7 @@
+15/07/29 20:39:40 INFO Worker: Asked to launch executor app-20150729203940-0001/0 for peel-wordcount-spark
+15/07/29 20:39:40 INFO ExecutorRunner: Launch command: "/usr/lib/jvm/java-8-oracle/jre/bin/java" "-cp" "/home/someuser/etc/spark-1.4.0-bin-hadoop2.4/sbin/../conf/:/home/someuser/etc/spark-1.4.0-bin-hadoop2.4/lib/spark-assembly-1.4.0-hadoop2.4.0.jar:/home/someuser/etc/spark-1.4.0-bin-hadoop2.4/lib/datanucleus-core-3.2.10.jar:/home/someuser/etc/spark-1.4.0-bin-hadoop2.4/lib/datanucleus-api-jdo-3.2.6.jar:/home/someuser/etc/spark-1.4.0-bin-hadoop2.4/lib/datanucleus-rdbms-3.2.9.jar" "-Xms512M" "-Xmx512M" "-Dspark.driver.port=33941" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "akka.tcp://sparkDriver@130.149.248.229:33941/user/CoarseGrainedScheduler" "--executor-id" "0" "--hostname" "130.149.248.229" "--cores" "4" "--app-id" "app-20150729203940-0001" "--worker-url" "akka.tcp://sparkWorker@130.149.248.229:35014/user/Worker"
+15/07/29 20:39:48 INFO Worker: Asked to kill executor app-20150729203940-0001/0
+15/07/29 20:39:48 INFO ExecutorRunner: Runner thread for executor app-20150729203940-0001/0 interrupted
+15/07/29 20:39:48 INFO ExecutorRunner: Killing process!
+15/07/29 20:39:48 INFO Worker: Executor app-20150729203940-0001/0 finished with state KILLED exitStatus 0
+15/07/29 20:39:48 INFO Worker: Cleaning up local directories for application app-20150729203940-0001

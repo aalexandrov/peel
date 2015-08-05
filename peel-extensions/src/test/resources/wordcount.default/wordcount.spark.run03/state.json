@@ -1,0 +1,10 @@
+{
+  "name": "wordcount.spark.run03",
+  "suiteName": "wordcount.default",
+  "command": "\n              --class eu.stratosphere.peel.spark.Wordcount                         \\\n              /home/someuser/etc/benchmarks/peel-wordcount/apps/peel-wordcount-spark-jobs-1.0-SNAPSHOT.jar          \\\n              hdfs://localhost:9000/tmp/input/rubbish.txt                            \\\n              hdfs://localhost:9000/tmp/output/wordcount\n            ",
+  "runnerID": "spark-1.4.0",
+  "runnerName": "spark",
+  "runnerVersion": "1.4.0",
+  "runExitCode": 0,
+  "runTime": 9910
+}

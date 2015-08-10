@@ -53,6 +53,12 @@
         <constructor-arg name="lifespan" value="EXPERIMENT"/>
     </bean>
 
+    <!-- Cassandra -->
+    <bean id="cassandra-2.1.6" class="org.peelframework.cassandra.beans.system.Cassandra" parent="system">
+        <constructor-arg name="version" value="2.1.6"/>
+        <constructor-arg name="lifespan" value="EXPERIMENT"/>
+    </bean>
+
     <!-- Flink -->
     <bean id="flink-0.8.0" class="org.peelframework.flink.beans.system.Flink" parent="system">
         <constructor-arg name="version" value="0.8.0"/>

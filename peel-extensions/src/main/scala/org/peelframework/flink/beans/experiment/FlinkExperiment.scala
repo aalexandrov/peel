@@ -14,46 +14,50 @@ import spray.json._
 /** An `Experiment` implementation which handles the execution of a single Flink job. */
 class FlinkExperiment(
     command: String,
+    systems: Set[System] = Set.empty[System],
     runner : Flink,
     runs   : Int,
     inputs : Set[DataSet],
     outputs: Set[ExperimentOutput],
     name   : String,
-    config : Config) extends Experiment(command, runner, runs, inputs, outputs, name, config) {
+    config : Config) extends Experiment(command, systems, runner, runs, inputs, outputs, name, config) {
 
   def this(
     command: String,
+    systems: Set[System] = Set.empty[System],
     runner : Flink,
     runs   : Int,
     input  : DataSet,
     output : ExperimentOutput,
     name   : String,
-    config : Config) = this(command, runner, runs, Set(input), Set(output), name, config)
+    config : Config) = this(command, systems, runner, runs, Set(input), Set(output), name, config)
 
   def this(
     command: String,
+    systems: Set[System] = Set.empty[System],
     runner : Flink,
     runs   : Int,
     inputs : Set[DataSet],
     output : ExperimentOutput,
     name   : String,
-    config : Config) = this(command, runner, runs, inputs, Set(output), name, config)
+    config : Config) = this(command, systems, runner, runs, inputs, Set(output), name, config)
 
   def this(
     command: String,
+    systems: Set[System] = Set.empty[System],
     runner : Flink,
     runs   : Int,
     input  : DataSet,
     outputs: Set[ExperimentOutput],
     name   : String,
-    config : Config) = this(command, runner, runs, Set(input), outputs, name, config)
+    config : Config) = this(command, systems, runner, runs, Set(input), outputs, name, config)
 
   override def run(id: Int, force: Boolean): Experiment.Run[Flink] = {
     new FlinkExperiment.SingleJobRun(id, this, force)
   }
 
   def copy(name: String = name, config: Config = config) = {
-    new FlinkExperiment(command, runner, runs, inputs, outputs, name, config)
+    new FlinkExperiment(command, systems, runner, runs, inputs, outputs, name, config)
   }
 }
 

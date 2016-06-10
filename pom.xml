@@ -114,7 +114,7 @@
         <com.h2database.version>1.4.187</com.h2database.version>
         <anorm.version>2.4.0</anorm.version>
         <!-- JSON support -->
-        <spray.version>1.2.6</spray.version>
+        <spray.version>1.3.2</spray.version>
         <!-- Apache Commons -->
         <commons-compress.version>1.9</commons-compress.version>
         <commons-io.version>1.3.2</commons-io.version>
@@ -261,7 +261,17 @@
                 <version>${anorm.version}</version>
             </dependency>
 
-            <!-- JSON support -->
+            <!-- Spray -->
+            <dependency>
+                <groupId>io.spray</groupId>
+                <artifactId>spray-can_${scala.tools.version}</artifactId>
+                <version>${spray.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.spray</groupId>
+                <artifactId>spray-routing_${scala.tools.version}</artifactId>
+                <version>${spray.version}</version>
+            </dependency>
             <dependency>
                 <groupId>io.spray</groupId>
                 <artifactId>spray-json_${scala.tools.version}</artifactId>

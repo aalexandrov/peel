@@ -38,7 +38,15 @@
             <artifactId>anorm_${scala.tools.version}</artifactId>
         </dependency>
 
-        <!-- JSON support -->
+        <!-- Spray -->
+        <dependency>
+            <groupId>io.spray</groupId>
+            <artifactId>spray-can_${scala.tools.version}</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.spray</groupId>
+            <artifactId>spray-routing_${scala.tools.version}</artifactId>
+        </dependency>
         <dependency>
             <groupId>io.spray</groupId>
             <artifactId>spray-json_${scala.tools.version}</artifactId>

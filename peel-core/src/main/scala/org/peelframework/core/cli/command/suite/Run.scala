@@ -83,6 +83,13 @@ class Run extends Command {
       if (es.isEmpty || es.head != r.exp) r.exp :: es
       else es)
 
+    // if a shutdown signal is caught, clean up any `running` systems marked as `up`
+    sys.addShutdownHook(for {
+      System(s) <- graph.traverse()
+      if Lifespan.PROVIDED != s.lifespan
+      if s.isUp && s.isRunning
+    } yield s.tearDown())
+
     // SUITE lifespan
     try {
       logger.info("Executing experiments in suite")
